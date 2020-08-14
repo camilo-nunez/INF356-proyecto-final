@@ -16,4 +16,4 @@ $ pip install matplotlib
 ### A partir de la paralelización de las maquinas se procesan los gráficos
 
 Una vez ejecutado las celdas, se generarán visualizaciones en formato `.jpg` de las visualizaciones
-oceanograficas producidas ese dia.
+oceanograficas producidas ese dia, estos archivos se generan en la misma carpeta en donde se ejecuta el notebook.
