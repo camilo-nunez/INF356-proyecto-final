@@ -1,5 +1,5 @@
 # Distributed visualisation of oceanographic data using Apache Spark and LustreFS
-Repositorio para el proyecto ffinal de ramo INF-356.
+Repositorio para el proyecto final del ramo INF-356.
 
 # Introduccion
 
