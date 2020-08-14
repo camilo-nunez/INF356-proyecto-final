@@ -4,15 +4,15 @@ Repositorio para el proyecto ffinal de ramo INF-356.
 # Introduccion
 
 # Paso a Paso
-Para realizar el deploy del proyecto, se necesita 1 nodo principal y 2 nodos workers. En este oportunidad, y por cortecia del proyecto _Chileaen Virtual Obserevatory_, se tulizaron las siguientes maquinas para las pruebas:
+Para realizar el deploy del proyecto, se necesita 1 nodo principal y 2 nodos workers. En este oportunidad, y por cortecia del proyecto _Chilean Virtual Obserevatory_, se ulizaron las siguientes maquinas para las pruebas:
 ```
 inf356-master-01.chi2ad.local
 inf356-slave-01.chi2ad.local
 inf356-slave-02.chi2ad.local
 ```
-Cada máquinas fue virtualizada por medio de Ovirt 4.1, con una configuración de 4 CPU, 8GM de RAM, y 50 GB en disco local. Las máquinas cuentan con una intefaz de _InfiniBand_ virtualizada usuando SR-IOV para tener acceso a la _LNet_ de __LustreFS__. El sistema operativo usado fue Debian 10.
+Cada máquina fue virtualizada por medio de Ovirt 4.1, con una configuración de 4 CPU, 8GM de RAM, y 50 GB en disco local. Las máquinas cuentan con una intefaz de _InfiniBand_ virtualizada usando SR-IOV para tener acceso a la _LNet_ de __LustreFS__. El sistema operativo usado fue Debian 10.
 
-Por otro lado, se proporcionó el acceso a una directorio en el _archive_ del _Chilean Virtual Obserevatory_, el cual cuenta con __LustreFS__ versión 2.10.
+Por otro lado, se proporcionó el acceso a un directorio en el _archive_ del _Chilean Virtual Observatory_, el cual cuenta con __LustreFS__ versión 2.10.
 
 A continuacion se detalla el paso a paso necesario para desplegar el proyecto un cluster.
 
@@ -114,11 +114,11 @@ inf356-slave-02.chi2ad.local
 ## Inicio del cluster Spark
 > Estos pasos solo se deben hacer en el master.
 
-1. Para iniciar el cluster, debemos diriggirnos a la carpeta `/usr/local/spark` y ejecutar el archivo:
+1. Para iniciar el cluster, debemos dirigirnos a la carpeta `/usr/local/spark` y ejecutar el archivo:
 ```
 ./sbin/start-all.sh
 ```
-2. En caso de querer detner el cluster, se debe ejucta rel archivo:
+2. En caso de querer detener el cluster, se debe ejecuta el archivo:
 ```
 ./sbin/stop-all.sh
 ```
@@ -133,14 +133,14 @@ Para ver el dashboard de Spark, se debe ingresar a la URL `http://inf356-master-
 apt install python3-pip
 ```
 
-2. Para instalar Jupyter y todas las dependeccias utlizas en este proyecto, se debe usar:
+2. Para instalar Jupyter y todas las dependencias utilizadas en este proyecto, se debe usar:
 ```
 pip3 install jupyter netCDF4 py4j xray pandas==0.23.4 numpy seaborn matplotlib
 ```
 
 ## Configurar PySpark
 > Estos pasos solo se deben hacer en el master.
-1. Agreegar las siguietnees variables de entornor en el `~/.bashrc`:
+1. Agregar las siguientes variables de entorno en el `~/.bashrc`:
 ```
 export SPARK_HOME='/usr/local/spark/'
 export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
@@ -153,17 +153,17 @@ Luego hay que cargarlo de nuevo con el comando `source ~/.bashrc`
 
 ## Montar el _Archive_ en Lustre
 > Estos pasos solo se deben hacer en el master.
-1. Para montar el archive en el master, se debe crear la carpeta:
+1. Para montar el archivo en el master, se debe crear la carpeta:
 ```
 /archive/
 ```
-2. Luego se ddebe usar el comando `mount` para el filesystem:
+2. Luego se debe usar el comando `mount` para el filesystem:
 ```
 mount -t lustre 10.10.XXX.XXX@o2ib:10.10.XXX.XXX@o2ib:/chivodp/inf356_sets /archive/
 ```
 > Por motivos de seguridad, se omitieron digitos en las IPs de los MDS.
 
-## Montar el crowler de datos
+## Montar el crawler de datos
 > Estos pasos solo se deben hacer en el master.
 1. Se debe copiar el archivo `lurker.py` en la carpeta `/archive/data/`.
 
