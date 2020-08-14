@@ -152,6 +152,7 @@ export PATH=$SPARK_HOME:$PATH:~/.local/bin:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
 Luego hay que cargarlo de nuevo con el comando `source ~/.bashrc`
 
 ## Montar el _Archive_ en Lustre
+> Estos pasos solo se deben hacer en el master.
 1. Para montar el archive en el master, se debe crear la carpeta:
 ```
 /archive/
@@ -163,6 +164,7 @@ mount -t lustre 10.10.XXX.XXX@o2ib:10.10.XXX.XXX@o2ib:/chivodp/inf356_sets /arch
 > Por motivos de seguridad, se omitieron digitos en las IPs de los MDS.
 
 ## Montar el crowler de datos
+> Estos pasos solo se deben hacer en el master.
 1. Se debe copiar el archivo `lurker.py` en la carpeta `/archive/data/`.
 
 2. Configurar el cron para el master con el commando `crontab -e `, y agregar la siguiente linea:
