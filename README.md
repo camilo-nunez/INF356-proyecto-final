@@ -12,7 +12,7 @@ inf356-slave-02.chi2ad.local
 ```
 Cada máquinas fue virtualizada por medio de Ovirt 4.1, con una configuración de 4 CPU, 8GM de RAM, y 50 GB en disco local. Las máquinas cuentan con una intefaz de _InfiniBand_ virtualizada usuando SR-IOV para tener acceso a la _LNet_ de __LustreFS__. El sistema operativo usado fue Debian 10.
 
-Por otro lado, se proporcionó el acceso a una directorio en el _archive_ del _Chileaen Virtual Obserevatory_, el cual cuenta con __LustreFS__ versión 2.10.
+Por otro lado, se proporcionó el acceso a una directorio en el _archive_ del _Chilean Virtual Obserevatory_, el cual cuenta con __LustreFS__ versión 2.10.
 
 A continuacion se detalla el paso a paso necesario para desplegar el proyecto un cluster.
 
