@@ -1,7 +1,7 @@
 # Distributed visualisation of oceanographic data using Apache Spark and LustreFS
 Repositorio para el proyecto final del ramo INF-356.
 
-# Introduccion
+# Introducción
 El procesamiento y visualización de datos a través del tiempo y a gran escala es un desafio permanente de la era contemporánea, debido al volumen y rapidez con la cual se genera estos. Este desafio se ha puesto a prueba a lo largo de múltiples disciplinas, como el procesamiento de datos astronómicos o el procesamiento de lenguaje natural para la detección de _fakenews_ en redes sociales.
 
 A medida que la tecnología aumenta y mejora, los datos generados por los instrumentos actuales, demandan un mayor uso de las tecnologías existentes. Unas de las principales fuentes de datos, son los sistemas sensoriales oceanográficos, capaces de captar mediciones de su entorno y transmitirlas en tiempo real, demandando una plataforma capaz de recibir estas grandes cantidades de datos y procesarlos en tiempo real para su visualización y posterior análisis.
