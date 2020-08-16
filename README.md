@@ -2,6 +2,11 @@
 Repositorio para el proyecto final del ramo INF-356.
 
 # Introduccion
+El procesamiento y visualización de datos a través del tiempo y a gran escala es un desafio permanente de la era contemporánea, debido al volumen y rapidez con la cual se genera estos. Este desafio se ha puesto a prueba a lo largo de múltiples disciplinas, como el procesamiento de datos astronómicos o el procesamiento de lenguaje natural para la detección de _fakenews_ en redes sociales.
+
+A medida que la tecnología aumenta y mejora, los datos generados por los instrumentos actuales, demandan un mayor uso de las tecnologías existentes. Unas de las principales fuentes de datos, son los sistemas sensoriales oceanográficos, capaces de captar mediciones de su entorno y transmitirlas en tiempo real, demandando una plataforma capaz de recibir estas grandes cantidades de datos y procesarlos en tiempo real para su visualización y posterior análisis.
+
+Frente a esto, el presente trabajo busca contribuir en el pipeline de almacenamiento y procesamientos de estos datos. Particularmente, la contribución de este trabajo es crear una plataforma distribuida para el procesamiento imágenes en datos oceanográficos, usando (1) _LustreFS_ como filesystem distribuido para su almacenamiento, (2) el framework _Apache Spark_ para el procesamiento distribuido, y (3) _Jupyter Notebook_ para la edición de código.
 
 # Paso a Paso
 Para realizar el deploy del proyecto, se necesita 1 nodo principal y 2 nodos workers. En este oportunidad, y por cortecia del proyecto _Chilean Virtual Obserevatory_, se ulizaron las siguientes maquinas para las pruebas:
